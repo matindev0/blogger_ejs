@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("./partials/head.ejs") %>
+</head>
+
+<body>
+    <div class="container">
+        <!-- navbar -->
+
+        <div>
+            <div>
+
+            </div>
+            <form action="/api/blog" method="POST" enctype="multipart/form-data">
+
+                <h3 class="text-dark-emphasis">
+                    Post your content
+                    <small class="text-body-secondary text-dark-emphasis">here</small>
+                </h3>
+
+                <div class="mb-3">
+
+                    <input type="file" class="form-control" name="coverImageURL" id="coverImageURL">
+
+                </div>
+                <div class="mb-3">
+                    <label for="title" class="form-label">
+                        <h2>Title</h2>
+                    </label>
+                    <input type="text" class="form-control" name="title" id="title" aria-describedby="emailHelp">
+                </div>
+
+
+                <label for="title" class="form-label">
+                    <h2>Content</h2>
+                </label>
+                <div class="form-floating">
+
+                    <textarea class="form-control" placeholder="Add Content" name="body"
+                        id="floatingTextarea"></textarea>
+
+                </div>
+                <div class="mt-3">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <a href="/homepage"><span class="btn btn-primary "> Go-Back </span></a>
+                </div>
+            </form>
+        </div>
+
+
+
+
+
+        <%- include("./partials/script.ejs") %>
+    </div>
+</body>
+
+</html>

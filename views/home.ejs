@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("./partials/head.ejs") %>
+</head>
+
+<body>
+    <div class="container">
+        <!-- navbar -->
+        <%- include("./partials/nav.ejs") %>
+
+            <div class="grid grid-three-cols">
+                <% blogs.forEach(blog=> { %>
+                    <div class="card  mt-3" style="width: 18rem; ">
+                        <img src=<%=blog.coverImageURL %> class="card-img-top" alt="img" width="200px" height="200px">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%=blog.title %>
+                            </h5>
+
+                            <a href=<%=blog._id%> class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                    <% }) %>
+
+            </div>
+
+
+
+            <%- include("./partials/script.ejs") %>
+    </div>
+</body>
+
+</html>
