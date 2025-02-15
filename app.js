@@ -7,10 +7,10 @@ const userRouter = require("./Routers/user-router")
 const blogRouter = require("./Routers/blog-router")
 const cookieParser = require("cookie-parser")
 
-const PORT = process.env.PORT;
+const PORT = '8080';
 const staticPath = path.join(__dirname, "./public")
 const mongoose = require("mongoose")
-mongoose.connect(process.env.MONGODB_STRING).then(() => console.log("MongoDB is connected..."))
+mongoose.connect("mongodb+srv://matindev:Matin@cluster0.lcv6xlw.mongodb.net/?retryWrites=true&w=majority").then(() => console.log("MongoDB is connected..."))
 
 
 app.set("view engine", "ejs")
